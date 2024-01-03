@@ -93,9 +93,9 @@ app SaaSTemplate {
 
 entity User {=psl
   id                        Int             @id @default(autoincrement())
-  email                     String         @unique
-  username                  String?          @unique
-  password                  String
+  email                     String?         @unique
+  username                  String          @unique
+  password                  String?
   createdAt                 DateTime        @default(now())
   lastActiveTimestamp       DateTime        @default(now())
   isAdmin                   Boolean         @default(false)
